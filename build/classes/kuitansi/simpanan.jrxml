@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b6bc3f8b-acd2-4ad2-8936-1b4a8b045ce5">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="jns_simpan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from simpanan where id=$P{id}]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_angg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_angg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_simpan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jns_simpan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_simpan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="581" y="30" width="18" height="20" uuid="f1fa1245-119a-4304-93f6-177838dd1688"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="10" width="18" height="20" uuid="6a421636-1124-43e0-a02e-559eeaef70a4"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="10" width="106" height="20" uuid="5d19514a-d1fb-4d71-8b4c-911678f8a297"/>
+				<text><![CDATA[Id. Simpanan]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="10" width="53" height="43" uuid="ae196149-2232-4c9c-9e1e-f4ffa6af9ca2"/>
+				<imageExpression><![CDATA["E:\\2 JAVA_IT\\smstr 4 UAS Koperasi Simpan Pinjam\\koperasi\\src\\img\\logo_koperasi.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="73" y="10" width="152" height="30" uuid="8dea474a-2afd-499c-b8ef-22e69140e293"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOPERASI SIMPAN PINJAM NR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="40" width="226" height="13" uuid="8c3c4dbe-f71f-4d0b-b609-eee7e1853e21"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jl. Anggrek Rt22/06 Tegalwangi Talang Tegal Jawa Tengah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="30" width="106" height="20" uuid="9eb5b537-c238-4871-894e-47311e50d274"/>
+				<text><![CDATA[Tanggal Transaksi ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="12" width="751" height="33" uuid="f623bd29-5caf-4071-aceb-b20349f1d482"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUKTI PENGELUARAN DANA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="599" y="10" width="100" height="20" uuid="aecd6b93-8264-4317-a54a-e70d01c8db28"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="30" width="100" height="20" uuid="c4fefd64-f853-4a3f-b353-045dd26c94c4"/>
+				<textFieldExpression><![CDATA[$F{tgl_simpan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="751" height="1" uuid="d456c67f-0eeb-4418-b610-3fc7ce876dfd"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="751" height="1" uuid="df9eff1f-02c8-493e-9e6a-cfc7f0c577b0"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="3" width="751" height="33" uuid="1e4f4a9c-dfa7-4409-bb5f-7604e0718c81"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUKTI SIMPANAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="171" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="166" height="20" uuid="8e1b4367-ef26-401d-8231-cae86c829cf5"/>
+				<text><![CDATA[Id Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="10" width="18" height="20" uuid="69a28986-8536-481a-aab8-6b2aff3dad83"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="166" height="20" uuid="4aca3dd6-93aa-4f33-a687-265dde52f6a3"/>
+				<text><![CDATA[Nama Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="30" width="18" height="20" uuid="b955f62c-e123-401f-9582-9fe92008dd9b"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="166" height="20" uuid="fcaad1aa-bb59-4583-a549-307eb17dc430"/>
+				<text><![CDATA[Jumlah SImpanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="50" width="18" height="20" uuid="0e35105e-eda5-4ea8-b35a-89666d78677b"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="10" width="166" height="20" uuid="99ffa507-10a5-4e15-9a6b-613179c05237"/>
+				<text><![CDATA[Jenis Simpanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="10" width="18" height="20" uuid="a8651177-cee5-4982-8879-e840f36e101b"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="30" width="166" height="20" uuid="8eb2a28e-af4b-4d16-8281-76d928e30f2c"/>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="30" width="18" height="20" uuid="e4782f5e-d25c-4e5c-81db-50606b9bd4a1"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="81" width="100" height="20" uuid="94810a7f-ae9c-41af-afcf-338d4b6404f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Kasir]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="82" width="742" height="1" uuid="482136b7-454b-4819-b0d3-0fabc4a2bf8f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="82" width="742" height="1" uuid="d91a3a02-131e-4576-8fc4-b68c0a77a84e"/>
+			</line>
+			<line>
+				<reportElement x="53" y="163" width="164" height="1" uuid="42ad4533-b565-430f-98d6-b4c922cd97d0"/>
+			</line>
+			<staticText>
+				<reportElement x="535" y="82" width="164" height="20" uuid="3f4d26c6-bb1b-4503-98df-b80c587ec9b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Yang bersangkutan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="535" y="144" width="164" height="20" uuid="bea3a475-836d-4e7c-b160-900432ac7c6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_angg}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="535" y="165" width="164" height="1" uuid="81480746-45e2-4b27-a36c-e36a64e11e66"/>
+			</line>
+			<textField>
+				<reportElement x="185" y="10" width="100" height="20" uuid="2a3bbc1f-f401-4677-8544-b16736e0288b"/>
+				<textFieldExpression><![CDATA[$F{id_angg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="33" width="100" height="20" uuid="6ed4ccd7-3ca4-4ef9-9fde-1bac566cd48e"/>
+				<textFieldExpression><![CDATA[$F{nama_angg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="53" width="100" height="20" uuid="89ad15d6-c231-4d35-ad94-e48f32c25df5"/>
+				<textFieldExpression><![CDATA[$F{jml_simpan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="30" width="184" height="20" uuid="1de72c30-ceca-4467-8b51-035c2ac356cc"/>
+				<textFieldExpression><![CDATA[$F{ket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="10" width="143" height="20" uuid="d5988ae5-d7a9-46b1-a088-ada8a9991c06"/>
+				<textFieldExpression><![CDATA[$P{jns_simpan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="10" width="21" height="20" uuid="ffe2d7a1-d672-4c80-b8e9-a796f01496ce"/>
+				<textFieldExpression><![CDATA[$F{jns_simpan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="561" y="10" width="18" height="20" uuid="29babc16-2ec3-4ba7-b466-4c3a9223f869"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0d6645e-97ae-4406-8494-476808176eb4">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pengeluaran]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_pengl" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pengl" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="66" y="40" width="226" height="13" uuid="0f633fd6-76f7-471f-ba42-abbae24383f4"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jl. Anggrek Rt22/06 Tegalwangi Talang Tegal Jawa Tengah]]></text>
+			</staticText>
+			<image>
+				<reportElement x="3" y="10" width="53" height="43" uuid="37e8d732-2135-4334-9080-a75d6ab8a838"/>
+				<imageExpression><![CDATA["E:\\2 JAVA_IT\\smstr 4 UAS Koperasi Simpan Pinjam\\koperasi\\src\\img\\logo_koperasi.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="66" y="10" width="152" height="30" uuid="d6d01432-7249-419e-a542-2a3f5347f597"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOPERASI SIMPAN PINJAM NR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="10" width="221" height="43" forecolor="#66CCFF" uuid="51e55aac-141c-4223-bbd0-009a473e05e3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[REPORT PENGELUARAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="1" width="100" height="27" uuid="bd6cb322-6968-40c6-86c9-92857c48542c"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="1" width="130" height="27" uuid="3f50448e-4169-4e45-b1ed-9e16d60d080b"/>
+				<text><![CDATA[jml_pengl]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="1" width="124" height="27" uuid="4dc9796f-3b89-49b2-8757-38fc6561c63a"/>
+				<text><![CDATA[tgl_pengl]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="1" width="197" height="27" uuid="610da13b-db25-4254-b63c-89fef5ed6c83"/>
+				<text><![CDATA[ket]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="100" height="27" uuid="4ec4d3e9-0ed7-4e48-919c-a23fea2c4879"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="0" width="130" height="27" uuid="41c66975-a54b-474b-886b-3e671ca24c6a"/>
+				<textFieldExpression><![CDATA[$F{jml_pengl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="124" height="27" uuid="897e9ba1-b82a-48a2-a19b-e9da15ef75a8"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($F{tgl_pengl})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="0" width="197" height="27" uuid="06508b35-b492-4772-b419-66edea93a019"/>
+				<textFieldExpression><![CDATA[$F{ket}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

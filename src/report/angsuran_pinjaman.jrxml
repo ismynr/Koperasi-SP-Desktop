@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d02ce1e1-e606-4895-874b-d303f8c7c09d">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from angsuran_pinjaman]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pinjam" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_angg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="angsur_ke" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_angsur" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sisa_angsur" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_angsur" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="denda" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_tempo" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="id_pinjam">
+		<groupExpression><![CDATA[$F{id_pinjam}]]></groupExpression>
+	</group>
+	<group name="angsur_ke">
+		<groupExpression><![CDATA[$F{angsur_ke}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="73" y="40" width="226" height="13" uuid="a2b76934-19f0-422a-b9e1-77bcd8632e92"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jl. Anggrek Rt22/06 Tegalwangi Talang Tegal Jawa Tengah]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="10" width="53" height="43" uuid="f05c6a74-2167-452d-bdd9-47b9dafa7c1b"/>
+				<imageExpression><![CDATA["E:\\2 JAVA_IT\\smstr 4 UAS Koperasi Simpan Pinjam\\koperasi\\src\\img\\logo_koperasi.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="591" y="10" width="221" height="43" forecolor="#66CCFF" uuid="6dd8e444-84cc-43cd-9b0e-2c67249dc80a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[REPORT ANGSURAN PINJAMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="10" width="152" height="30" uuid="e7b5d7f1-9f82-4c05-8666-fe9c3fd2f250"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOPERASI SIMPAN PINJAM NR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="0" width="152" height="27" uuid="f1a5d0de-7b37-4352-83cc-50b3088d464b"/>
+				<text><![CDATA[NAMA ANGGOTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="0" width="58" height="27" uuid="9cd19eae-ab9f-4049-ad16-7debcb0e5c1c"/>
+				<text><![CDATA[ANGSUR KE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="27" uuid="7288c0ec-3b78-45d6-885a-d2c7796f2a16"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="81" height="27" uuid="5da1e3da-a27e-4ef9-ae9e-e47c32371177"/>
+				<text><![CDATA[ID PINJAMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="0" width="100" height="27" uuid="492ad2cf-5450-4449-8bf0-d3cc637204e0"/>
+				<text><![CDATA[JUMLAH ANGSURAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="0" width="100" height="27" uuid="401d7627-e0a8-4c17-b251-7db63aa0cea2"/>
+				<text><![CDATA[SISA ANGSURAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="0" width="100" height="27" uuid="1f5e626f-20bc-44d9-a028-31063fa0bbbe"/>
+				<text><![CDATA[TANGGAL ANGSURAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="641" y="0" width="61" height="27" uuid="d64e9cde-9d80-4f4b-8b97-688c0aa6dacb"/>
+				<text><![CDATA[DENDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="0" width="100" height="27" uuid="271a5fe6-8176-4c58-a9ea-0e53165dda77"/>
+				<text><![CDATA[TANGGAL TEMPO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="131" y="0" width="152" height="28" uuid="32595102-90ad-4afc-a72b-b6f921928bf1"/>
+				<textFieldExpression><![CDATA[$F{nama_angg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="81" height="28" uuid="0dd6ffe5-b7db-4f3a-acd4-22f6c3453c40"/>
+				<textFieldExpression><![CDATA[$F{id_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="28" uuid="93302199-8d57-409f-bc1c-b8a565431d2d"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="283" y="0" width="58" height="28" uuid="4363c6e8-b74d-4cbb-96de-0b1c3b3a020d"/>
+				<textFieldExpression><![CDATA[$F{angsur_ke}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="100" height="28" uuid="c87b6f6a-60bc-44c0-a8db-bcc65e2c54dc"/>
+				<textFieldExpression><![CDATA[$F{jml_angsur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="0" width="100" height="28" uuid="21e298ce-0ebd-4049-b628-10e1d631fabb"/>
+				<textFieldExpression><![CDATA[$F{sisa_angsur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="0" width="100" height="28" uuid="9662b765-6aed-4982-91fd-599fdec51073"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($F{tgl_angsur})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="641" y="0" width="61" height="28" uuid="0d6f42cf-986b-4cb8-83a5-a4aa5eb8c32a"/>
+				<textFieldExpression><![CDATA[$F{denda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="0" width="100" height="28" uuid="afdcd732-4bcd-48a1-b915-93ef76480259"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($F{tgl_tempo})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

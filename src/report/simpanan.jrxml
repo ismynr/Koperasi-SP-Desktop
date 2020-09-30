@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c5d0cfd7-2a1e-417c-94a6-cb80fbd0747c">
+	<property name="ireport.zoom" value="1.3310000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from simpanan]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_angg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_angg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_simpan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jns_simpan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_simpan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="id_angg">
+		<groupExpression><![CDATA[$F{id_angg}]]></groupExpression>
+	</group>
+	<group name="nama_angg">
+		<groupExpression><![CDATA[$F{nama_angg}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="334" y="10" width="221" height="43" forecolor="#66CCFF" uuid="5f1a2db5-aa2d-4203-9082-1defbfc49b83"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[REPORT SIMPANAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="10" width="152" height="30" uuid="aea42bfc-3192-466a-9fbb-dcfbc9dac2d5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOPERASI SIMPAN PINJAM NR]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="10" width="53" height="43" uuid="f4339440-6fbc-462f-81b5-af32f7ce6567"/>
+				<imageExpression><![CDATA["E:\\2 JAVA_IT\\smstr 4 UAS Koperasi Simpan Pinjam\\koperasi\\src\\img\\logo_koperasi.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="64" y="40" width="226" height="13" uuid="82671ad2-cfda-4692-b8d9-21e8fd02e486"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jl. Anggrek Rt22/06 Tegalwangi Talang Tegal Jawa Tengah]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="0" width="53" height="31" uuid="0951cba0-6c9c-4192-9eba-cca279c3ae20"/>
+				<text><![CDATA[id_angg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="64" height="31" uuid="b4f96c9e-f910-4714-bc52-dc6aa0e29863"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="1" width="81" height="31" uuid="01c2e988-b8b5-49c7-895e-fbecf5eee6d2"/>
+				<text><![CDATA[jml_simpan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="66" height="30" uuid="745c1ca4-59e5-407c-8f97-b11eda35e9db"/>
+				<text><![CDATA[tgl_simpan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="0" width="115" height="32" uuid="efaedb36-a2f5-46d5-acdb-598c7402258c"/>
+				<text><![CDATA[nama_angg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="1" width="117" height="30" uuid="7fae8995-f4da-41db-a0b7-b5f08fd92e7a"/>
+				<text><![CDATA[ket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="0" width="59" height="31" uuid="1d9e263b-146b-4714-abff-6cbdb74c7d20"/>
+				<text><![CDATA[jns_simpan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="64" height="28" uuid="bed9075d-8852-4151-a1c3-411e079c99cb"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="1" width="53" height="30" uuid="1cc76e60-f5c2-4b90-8b3b-5f139b33f36e"/>
+				<textFieldExpression><![CDATA[$F{id_angg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="2" width="115" height="30" uuid="bef60b65-1397-493d-bcbd-c0e76098a0aa"/>
+				<textFieldExpression><![CDATA[$F{nama_angg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="3" width="81" height="29" uuid="6a0c9c3d-0117-425b-b780-f9c8d478abf7"/>
+				<textFieldExpression><![CDATA[$F{jml_simpan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="1" width="117" height="31" uuid="50a9366f-91da-4452-87b0-3a487d29d457"/>
+				<textFieldExpression><![CDATA[$F{ket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="0" width="59" height="31" uuid="7f09c4bf-67c6-41f0-a70d-22ccb906505a"/>
+				<textFieldExpression><![CDATA[$F{jns_simpan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="3" width="66" height="27" uuid="d2cbd0f3-9f27-4b9b-92a7-89ac0ed99d62"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($F{tgl_simpan})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
